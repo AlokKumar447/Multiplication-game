@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Multiplication Game</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>Multiplication Practice Game</h1>
+
+    <div class="menu">
+      <h2>Choose an option:</h2>
+      <div class="button-group">
+        <button class="btn table-btn" onclick="startTable(1, 10)">Table 1–10</button>
+        <button class="btn table-btn" onclick="startTable(1, 20)">Table 1–20</button>
+        <button class="btn table-btn" onclick="startTable(21, 30)">Table 21–30</button>
+      </div>
+      <div class="button-group">
+        <button class="btn multi-btn" onclick="startMultiplication('2x2')">2-digit × 2-digit</button>
+        <button class="btn multi-btn" onclick="startMultiplication('3x3')">3-digit × 3-digit</button>
+        <button class="btn multi-btn" onclick="startMultiplication('4x4')">4-digit × 4-digit</button>
+      </div>
+    </div>
+
+    <div class="game hidden">
+      <div class="question"></div>
+      <div class="timer"></div>
+      <div class="controls">
+        <button class="btn answer-btn" onclick="showAnswer()">Show Answer</button>
+        <button class="btn stop-btn" onclick="stopGame()">Stop Practice</button>
+      </div>
+      <div class="answer hidden"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
